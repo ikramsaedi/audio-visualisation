@@ -4,9 +4,8 @@ This is an audio visualiser of the song [Fireflies by Owl City](https://www.yout
 
 ## Access the deployed site here
 
-NOTE: This currently only works on Chrome.
-
-Visit: https://ikramsaedi.github.io/audio-visualisation/
+BROWSER SUPPORT: This is currently very laggy in Chrome version 134 and up, as well as Firefox. It does work in Safari though.
+[Deployed site](https://ikramsaedi.github.io/audio-visualisation/)
 
 ## How to run this program locally
 

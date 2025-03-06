@@ -37,11 +37,10 @@ function onPlay() {
 
   // This gets the fireflies audio input as a mediastream input
   // It needs to be in the mediastream format so that the analyser node can analyse it
-  const source = audioCtx.createMediaStreamSource(
-    // Has to be typed as any because captureStream as a type doesn't exist
-    // on HTML Audio Elements... even though it is a real method on that element..
-    (audio as any).captureStream()
-  );
+  const source = audioCtx.createMediaElementSource(audio);
+  // Without a destination for our audio source, the audio is being directed nowhere
+  // Meaning that the audio will not play. This line ensures that the audio will play
+  source.connect(audioCtx.destination);
   // Now the analyser has a mediastream input to analyse so you can grab the frequency data later
   source.connect(analyser);
 
